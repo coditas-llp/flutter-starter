@@ -1,1 +1,1 @@
-const padding = 16.0;
+double padding = 16.0;

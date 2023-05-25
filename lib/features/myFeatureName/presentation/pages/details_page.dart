@@ -1,16 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:scaffold/core/screen_responsiveness/sr_extensions.dart';
 import 'package:scaffold/features/myFeatureName/presentation/bloc/my_bloc.dart';
 import 'package:scaffold/features/myFeatureName/presentation/bloc/my_bloc_states.dart';
-import 'package:scaffold/rout_config.gr.dart';
-
 import '../../../../core/constants/dimen.dart';
 import '../../../../core/utility/common_widgets.dart';
 import '../bloc/my_bloc_events.dart';
 import '../widgets/entity_list.dart';
 import '../widgets/single_entity.dart';
-import 'home_page.dart';
 
 /// The details screen
 @RoutePage()
@@ -26,11 +24,12 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(title: Text('$title Details Screen')),
       body: Center(
         child: Container(
-          padding: const EdgeInsets.all(padding),
+          padding: EdgeInsets.all(padding),
           child: BlocBuilder<MyBloc, MyStates>(
             builder: (context, state) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   if (state is ShowData)
                     SingleEntity(state.model)
@@ -40,9 +39,37 @@ class DetailsScreen extends StatelessWidget {
                     Text(state.msg)
                   else
                     Container(
-                      padding: const EdgeInsets.all(padding),
+                      padding: EdgeInsets.all(padding),
                       child: const Text("Tap below buttons to view data"),
                     ),
+                  height(),
+                  Text(
+                    'Some sample text 10.w',
+                    style: TextStyle(fontSize: 10.w),
+                  ),
+                  height(),
+                  const Text(
+                    'Some sample text 20',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  height(),
+                  const Text(
+                    'Some sample text textScaleFactor 1',
+                    textScaleFactor: 1.0,
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  height(),
+                  Text(
+                      'textScaleFactor ${MediaQuery.of(context).textScaleFactor}',
+                      style: const TextStyle(fontSize: 20)),
+                  Text('padding $padding',
+                      style: const TextStyle(fontSize: 20)),
+                  height(),
+                  Text(
+                      'devicePixelRatio ${MediaQuery.of(context).devicePixelRatio}',
+                      style: const TextStyle(fontSize: 20)),
+                  height(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -63,50 +90,8 @@ class DetailsScreen extends StatelessWidget {
               );
             },
           ),
-
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //   children: [
-          //     Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: <Widget>[
-          //         ...buttons(context, ""),
-          //       ],
-          //     ),
-          //     Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: <Widget>[
-          //         ...buttons(context, "/R2"),
-          //       ],
-          //     ),
-          //   ],
-          // ),
         ),
       ),
     );
   }
 }
-
-List<ElevatedButton> buttons(BuildContext context, String route) => [
-      ElevatedButton(
-        // onPressed: () => context.router .push(const HomeRoute()),
-        onPressed: () => context.router.pushNamed("/dashboard"),
-        child: Text('$route A'),
-      ),
-      // ElevatedButton(
-      //   onPressed: () => context.router .push('$route/A/A1'),
-      //   child: Text('$route A1'),
-      // ),
-      // ElevatedButton(
-      //   onPressed: () => context.router .go('$route/A/A2'),
-      //   child: Text('$route A2'),
-      // ),
-      // ElevatedButton(
-      //   onPressed: () => context.router .go('$route/B'),
-      //   child: Text('$route B'),
-      // ),
-      // ElevatedButton(
-      //   onPressed: () => context.router .go('$route/C'),
-      //   child: Text('$route C'),
-      // )
-    ];
