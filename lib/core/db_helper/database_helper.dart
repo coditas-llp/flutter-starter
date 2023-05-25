@@ -25,7 +25,7 @@ class DatabaseHelper {
   }
 
   ///database name
-  final dbName = "my_database";
+  final dbName = "my_database1";
 
   _initDatabase() async {
     String path = join(await getDatabasesPath(), '$dbName.db');
@@ -52,6 +52,14 @@ class DatabaseHelper {
 
   transaction(Database db) async {
     db.execute(transaction1Structure);
+    db.execute("insert into '$transaction1' "
+        '''
+    ('userName', 'userAge', 'desc') VALUES
+  ('One One', '11', 'Age is 11'),
+  ('One Two', '12', 'Age is 12'),
+  ('One Three', '13', 'Age is 13'),
+  ('One Four', '14', 'Age is 14');
+    ''');
   }
 
   static saveInDB(String tableName, List<dynamic> maps) async {

@@ -111,7 +111,8 @@ class NotificationUtils {
     /// ANDROID
     ///
     const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('app_icon');
+        //don't add extension of icon and icon must be in drawable folder
+        AndroidInitializationSettings('flutter');
 
     ///
     /// IOS
@@ -222,7 +223,8 @@ class NotificationUtils {
   }
 
   @pragma('vm:entry-point')
-  void notificationTapBackground(NotificationResponse notificationResponse) {
+  static void notificationTapBackground(
+      NotificationResponse notificationResponse) {
     // ignore: avoid_print
     print('notification(${notificationResponse.id}) action tapped: '
         '${notificationResponse.actionId} with'
@@ -365,7 +367,8 @@ class NotificationUtils {
       AndroidScheduleMode androidScheduleMode = AndroidScheduleMode.exact,
       required UILocalNotificationDateInterpretation absoluteTime,
       bool isSaved = false}) async {
-    debugPrint("$playSoundPref ${getIt<SharedPreferences>().getBool(playSoundPref)}");
+    debugPrint(
+        "$playSoundPref ${getIt<SharedPreferences>().getBool(playSoundPref)}");
 //todo:check in IOS case
 
     NotificationDetails platformDetails = NotificationDetails(

@@ -5,10 +5,11 @@ part 'my_model.g.dart';
 
 @JsonSerializable()
 class MyEntityModel extends MyEntity {
-  final int id;
+
+  final int localId;
 
   const MyEntityModel(
-      {required this.id, required super.userName, required super.userAge});
+      {required this.localId, required super.userName, required super.userAge});
 
   factory MyEntityModel.fromJson(Map<String, dynamic> json) =>
       _$MyEntityModelFromJson(json);

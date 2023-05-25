@@ -21,7 +21,7 @@ class MyLocalDataSourceImpl implements MyLocalDataSource {
     try {
       List<Map<String, dynamic>>? maps = await DatabaseHelper.getData(
           transaction1,
-          whClause: "where id = $id");
+          whClause: "where localId = $id");
       if (maps != null && maps.isNotEmpty) {
         return MyEntityModel.fromJson(maps[0]);
       } else {

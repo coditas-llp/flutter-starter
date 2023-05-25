@@ -10,7 +10,12 @@ import 'dart:async' show Completer;
 import 'package:flutter/widgets.dart';
 import 'package:flutter/cupertino.dart';
 
+bool isInit = false;
+
 sRInit(BuildContext context, [Size? defaultSize]) async {
+  if (isInit) {
+    isInit = false;
+  }
   defaultSize ??= const Size(360, 690);
   Size originalSize = MediaQuery.maybeOf(context)?.size ?? defaultSize;
 

@@ -14,9 +14,8 @@ const master1 = "master1";
 const transaction1Structure = '''CREATE TABLE $transaction1 (
     localId INTEGER PRIMARY KEY AUTOINCREMENT
     ,serverId INTEGER
-    ,title TEXT
-    ,value INTEGER
-    ,type INTEGER
+    ,userName TEXT
+    ,userAge INTEGER
     ,desc TEXT'''
 //default column
     ''',isEdited INTEGER
@@ -28,7 +27,7 @@ const transaction1Structure = '''CREATE TABLE $transaction1 (
    )''';
 
 const master1Structure = '''CREATE TABLE $master1 (
-    ,serverId INTEGER PRIMARY KEY
+    serverId INTEGER PRIMARY KEY
     ,title TEXT
     ,value INTEGER
     ,desc TEXT'''

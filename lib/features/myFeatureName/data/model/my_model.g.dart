@@ -8,7 +8,7 @@ part of 'my_model.dart';
 
 MyEntityModel _$MyEntityModelFromJson(Map<String, dynamic> json) =>
     MyEntityModel(
-      id: json['id'] as int,
+      localId: json['localId'] as int,
       userName: json['userName'] as String,
       userAge: json['userAge'] as int,
     );
@@ -17,5 +17,5 @@ Map<String, dynamic> _$MyEntityModelToJson(MyEntityModel instance) =>
     <String, dynamic>{
       'userName': instance.userName,
       'userAge': instance.userAge,
-      'id': instance.id,
+      'localId': instance.localId,
     };

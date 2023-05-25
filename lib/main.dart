@@ -1,90 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:scaffold/core/screen_responsiveness/sr_extensions.dart';
+import 'core/color_and_theme/app_theme.dart';
 import 'core/local_notifications//notification_utils.dart';
 import 'core/screen_responsiveness/sr_utils.dart';
+import 'features/myFeatureName/presentation/pages/home_page.dart';
 import 'injection_container.dart';
+import 'rout_config.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   //dependency injection
-  init();
+  await init();
   //local notification
   NotificationUtils().init();
 //init responsiveness
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  //autoroute
+  final _appRouter = AppRouter();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     //sizes as per screen orientation
     sRInit(context);
-    return MaterialApp(
+    return MaterialApp.router(
+        //for auto route
+        routerConfig: _appRouter.config(),
         title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: OrientationBuilder(
-          builder: (BuildContext context, Orientation orientation) {
-            return const MyHomePage(title: 'Flutter Demo Home Page');
-          },
-        ));
-  }
-}
+        theme: appTheme
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-             Text(
-              '${24.sp.toString()} You have pushed the button this many times:',
-            ),
-            SizedBox(height: 24.sp,),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        // home: OrientationBuilder(
+        //   builder: (BuildContext context, Orientation orientation) {
+        //     return HomePage();
+        //   },
+        // )
+        );
   }
 }

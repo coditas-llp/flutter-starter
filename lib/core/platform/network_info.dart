@@ -33,6 +33,7 @@ class NetworkInfo {
         isDeviceOnline = false;
       }
     }
+    return false;
     return isDeviceOnline;
   }
 }
