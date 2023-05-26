@@ -1,5 +1,6 @@
 // This is our global ServiceLocator
 import 'package:flutter/foundation.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 import 'package:get_it/get_it.dart';
 import 'package:scaffold/features/myFeatureName/data/datasource/my_local_data_source.dart';
 import 'package:scaffold/features/myFeatureName/data/datasource/my_online_data_source.dart';
@@ -17,8 +18,8 @@ import 'features/myFeatureName/presentation/bloc/my_bloc_states.dart';
 GetIt getIt = GetIt.instance;
 
 init() async {
-  //Feature
-  //External
+
+  ///External
   if(!kIsWeb) {
     Database db = await DatabaseHelper().db;
     await SharedPreferences.getInstance();
@@ -35,7 +36,13 @@ init() async {
     // signalsReady: true
   );
 
-  //data source
+  final FlutterLocalization localization = FlutterLocalization.instance;
+  // getIt.registerSingleton<SharedPreferences>(
+  //   sharedPreferences,
+  //   // signalsReady: true
+  // );
+///Feature
+  ///data source
   getIt.registerSingleton<MyLocalDataSource>(
     MyLocalDataSourceImpl(),
     // signalsReady: true
@@ -44,7 +51,7 @@ init() async {
     MyOnlineDataSourceImpl(),
     // signalsReady: true
   );
-  //repo
+  ///repo
   getIt.registerSingleton<MyRepo>(
     MyRepoImpl(
         networkInfo: NetworkInfo(),
@@ -52,10 +59,10 @@ init() async {
         myOnlineDataSource: getIt()),
     // signalsReady: true
   );
-//use cases
+///use cases
   getIt.registerSingleton<GetMyEntityUseCase>(GetMyEntityUseCase(getIt()));
   getIt.registerSingleton<GetMyListUseCase>(GetMyListUseCase(getIt()));
-  //bloc
+  ///bloc
   getIt.registerFactory(() => MyBloc(InitState(), getIt(), getIt()),
       // instanceName: "myBlocHomePage"
   );

@@ -4,7 +4,8 @@ ThemeData appTheme2 = ThemeData(
   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
   useMaterial3: true,
 );
-ThemeData appTheme = ThemeData(
+
+ThemeData get appTheme => ThemeData(
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
       primary: Colors.blueAccent,
@@ -42,7 +43,7 @@ ThemeData appTheme = ThemeData(
       foregroundColor: Colors.black,
       backgroundColor: Colors.white,
 // primary: color,
-      minimumSize: const Size(120, 32),
+      minimumSize: const Size(100, 32),
 // shape: RoundedRectangleBorder(
 //     side: const BorderSide(),
 //     borderRadius: BorderRadius.circular(24.0)),

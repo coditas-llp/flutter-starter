@@ -13,8 +13,9 @@ bool isInit = false;
 
 sRInit(BuildContext context) async {
   if (isInit) {
-    isInit = false;
+    return;
   }
+  isInit = true;
   AppStyle appStyle = AppStyle(screenSize: MediaQuery.of(context).size);
 
   Size originalSize = MediaQuery.of(context).size;

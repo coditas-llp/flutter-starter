@@ -59,11 +59,14 @@ dependencies:
   flutter_local_notifications: ^14.1.0
 
   # utility
-  intl: ^0.18.1
+  intl: ^0.18.0
   flutter_timezone: ^1.0.6
 
   # routing
   auto_route: ^7.2.0
+
+  # multilingual or localization
+  flutter_localization:
 
 dev_dependencies:
   flutter_test:
