@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:scaffold/core/use_case/use_case.dart';
+import '../../../../core/use_case/use_case.dart';
 
 import '../../../../core/errors/failure.dart';
 import '../entities/my_entity.dart';

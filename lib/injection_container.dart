@@ -1,14 +1,13 @@
 // This is our global ServiceLocator
 import 'package:flutter/foundation.dart';
-import 'package:flutter_localization/flutter_localization.dart';
 import 'package:get_it/get_it.dart';
-import 'package:scaffold/features/myFeatureName/data/datasource/my_local_data_source.dart';
-import 'package:scaffold/features/myFeatureName/data/datasource/my_online_data_source.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
 
 import 'core/db_helper/database_helper.dart';
 import 'core/platform/network_info.dart';
+import 'features/myFeatureName/data/datasource/my_local_data_source.dart';
+import 'features/myFeatureName/data/datasource/my_online_data_source.dart';
 import 'features/myFeatureName/data/repositories/my_repository_impl.dart';
 import 'features/myFeatureName/domain/repositories/my_repository.dart';
 import 'features/myFeatureName/domain/usecases/my_use_case.dart';
@@ -36,7 +35,7 @@ init() async {
     // signalsReady: true
   );
 
-  final FlutterLocalization localization = FlutterLocalization.instance;
+  // final FlutterLocalization localization = FlutterLocalization.instance;
   // getIt.registerSingleton<SharedPreferences>(
   //   sharedPreferences,
   //   // signalsReady: true

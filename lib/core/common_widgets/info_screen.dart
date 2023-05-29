@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scaffold/core/constants/dimen.dart';
+import '../constants/dimen.dart';
 
 class InfoContainer extends StatelessWidget {
   final String msg;

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:scaffold/rout_config.gr.dart';
+
+import '../../../../rout_config.gr.dart';
 
 @RoutePage()
 class TabThreeScreen extends StatelessWidget {

@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
-import 'package:scaffold/core/constants/dimen.dart';
-import 'package:scaffold/core/multilingual/app_locale.dart';
-import 'package:scaffold/rout_config.gr.dart';
 
 import '../../../../core/common_widgets/common_widgets.dart';
+import '../../../../core/constants/dimen.dart';
+import '../../../../core/multilingual/app_locale.dart';
+import '../../../../rout_config.gr.dart';
 
 @RoutePage()
 class TabOneScreen extends StatelessWidget {

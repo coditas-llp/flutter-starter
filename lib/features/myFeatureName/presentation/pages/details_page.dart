@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scaffold/core/screen_responsiveness/sr_extensions.dart';
+import '../../../../core/screen_responsiveness/sr_extensions.dart';
 
 import '../../../../core/common_widgets/common_widgets.dart';
 import '../../../../core/constants/dimen.dart';

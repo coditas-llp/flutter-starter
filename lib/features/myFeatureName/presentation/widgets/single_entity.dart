@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:scaffold/core/constants/dimen.dart';
 
+import '../../../../core/constants/dimen.dart';
 import '../../domain/entities/my_entity.dart';
 
 class SingleEntity extends StatelessWidget {

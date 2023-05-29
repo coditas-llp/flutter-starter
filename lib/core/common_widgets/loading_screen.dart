@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:scaffold/core/common_widgets/common_widgets.dart';
-import 'package:scaffold/core/constants/dimen.dart';
+
+import '../constants/dimen.dart';
+import 'common_widgets.dart';
 
 class LoadingContainer extends StatelessWidget {
   final String msg;

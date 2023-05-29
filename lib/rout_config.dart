@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:scaffold/rout_config.gr.dart';
 
-import 'features/myFeatureName/presentation/pages/details_page.dart';
-import 'features/myFeatureName/presentation/pages/home_page.dart';
+import 'rout_config.gr.dart';
 
 /// The route configuration.
 @AutoRouterConfig()

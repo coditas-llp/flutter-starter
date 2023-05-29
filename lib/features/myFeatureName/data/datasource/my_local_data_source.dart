@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:scaffold/core/db_helper/table_structures.dart';
 
 import '../../../../core/db_helper/database_helper.dart';
+import '../../../../core/db_helper/table_structures.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../model/my_model.dart';
 

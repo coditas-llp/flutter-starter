@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:scaffold/injection_container.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../injection_container.dart';
 
 /// A notification action which triggers a url launch event
 const String urlLaunchActionId = 'id_1';

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:scaffold/core/constants/dimen.dart';
+
+import '../constants/dimen.dart';
 
 height({double? height}) => SizedBox(
       height: height ?? padding,

@@ -1,4 +1,5 @@
-import 'package:scaffold/core/screen_responsiveness/sr_utils.dart';
+
+import 'sr_utils.dart';
 
 extension ResponsiveSizes on num {
   /// Calculates the height depending on the device's screen size

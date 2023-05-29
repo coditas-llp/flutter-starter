@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:scaffold/core/errors/exceptions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../injection_container.dart';
+import '../errors/exceptions.dart';
 import '../utility/utils.dart';
 import 'api_utils.dart';
 

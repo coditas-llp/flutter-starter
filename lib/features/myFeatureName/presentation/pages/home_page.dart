@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scaffold/injection_container.dart';
-import 'package:scaffold/rout_config.gr.dart';
-
+import '../../../../injection_container.dart';
+import '../../../../rout_config.gr.dart';
 import '../bloc/my_bloc.dart';
 
 @RoutePage()

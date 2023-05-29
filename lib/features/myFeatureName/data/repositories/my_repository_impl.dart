@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:scaffold/core/errors/failure.dart';
-import 'package:scaffold/core/platform/network_info.dart';
 
+import '../../../../core/errors/failure.dart';
+import '../../../../core/platform/network_info.dart';
 import '../../domain/entities/my_entity.dart';
 import '../../domain/repositories/my_repository.dart';
 import '../datasource/my_local_data_source.dart';
@@ -29,7 +29,7 @@ class MyRepoImpl implements MyRepo {
         return Right(model);
       } catch (e) {
         debugPrint(e.toString());
-        return Left(UnknownFailure());
+        return const Left(UnknownFailure());
       }
     } else {
       try {
@@ -37,7 +37,7 @@ class MyRepoImpl implements MyRepo {
         return Right(model);
       } catch (e) {
         debugPrint(e.toString());
-        return Left(UnknownFailure());
+        return const Left(UnknownFailure());
       }
     }
   }
@@ -50,7 +50,7 @@ class MyRepoImpl implements MyRepo {
         return Right(list);
       } catch (e) {
         debugPrint(e.toString());
-        return Left(UnknownFailure());
+        return const Left(UnknownFailure());
       }
     } else {
       try {
@@ -58,7 +58,7 @@ class MyRepoImpl implements MyRepo {
         return Right(list);
       } catch (e) {
         debugPrint(e.toString());
-        return Left(UnknownFailure());
+        return const Left(UnknownFailure());
       }
     }
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:scaffold/core/constants/dimen.dart';
+
+import '../constants/dimen.dart';
 
 class ErrorContainer extends StatelessWidget {
   final String msg;
