@@ -1,11 +1,11 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:scaffold/features/myFeatureName/domain/entities/my_entity.dart';
+
+import '../../domain/entities/my_entity.dart';
 
 part 'my_model.g.dart';
 
 @JsonSerializable()
 class MyEntityModel extends MyEntity {
-
   final int localId;
 
   const MyEntityModel(

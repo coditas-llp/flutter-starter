@@ -2,11 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scaffold/core/screen_responsiveness/sr_extensions.dart';
-import 'package:scaffold/features/myFeatureName/presentation/bloc/my_bloc.dart';
-import 'package:scaffold/features/myFeatureName/presentation/bloc/my_bloc_states.dart';
+
+import '../../../../core/common_widgets/common_widgets.dart';
 import '../../../../core/constants/dimen.dart';
-import '../../../../core/utility/common_widgets.dart';
+import '../bloc/my_bloc.dart';
 import '../bloc/my_bloc_events.dart';
+import '../bloc/my_bloc_states.dart';
 import '../widgets/entity_list.dart';
 import '../widgets/single_entity.dart';
 
@@ -14,9 +15,9 @@ import '../widgets/single_entity.dart';
 @RoutePage()
 class DetailsScreen extends StatelessWidget {
   /// Constructs a [DetailsScreen]
-  String title;
+  final String title;
 
-  DetailsScreen(this.title, {super.key});
+  const DetailsScreen(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -70,6 +70,12 @@ class DatabaseHelper {
         batch.insert(tableName, element,
             conflictAlgorithm: ConflictAlgorithm.replace);
       }
+      //single
+      // return await db.insert(
+      //   TaskTN,
+      //   toMap(),
+      //   conflictAlgorithm: ConflictAlgorithm.replace,
+      // );
       await batch.commit(noResult: true, continueOnError: true);
     } catch (e) {
       debugPrint(e.toString());

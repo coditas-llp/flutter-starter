@@ -1,24 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:scaffold/core/platform/network_info.dart';
-import 'package:scaffold/core/utility/common_widgets.dart';
-import 'package:scaffold/features/myFeatureName/data/datasource/my_local_data_source.dart';
-import 'package:scaffold/features/myFeatureName/data/datasource/my_online_data_source.dart';
-import 'package:scaffold/features/myFeatureName/data/repositories/my_repository_impl.dart';
-import 'package:scaffold/features/myFeatureName/domain/repositories/my_repository.dart';
-import 'package:scaffold/features/myFeatureName/domain/usecases/my_use_case.dart';
-import 'package:scaffold/features/myFeatureName/presentation/pages/tab_one.dart';
-import 'package:scaffold/features/myFeatureName/presentation/pages/tab_three.dart';
-import 'package:scaffold/features/myFeatureName/presentation/pages/tab_two.dart';
 import 'package:scaffold/injection_container.dart';
 import 'package:scaffold/rout_config.gr.dart';
 
-import '../../../../core/constants/dimen.dart';
 import '../bloc/my_bloc.dart';
-import '../bloc/my_bloc_states.dart';
-import 'details_page.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {

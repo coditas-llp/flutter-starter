@@ -1,7 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:scaffold/features/myFeatureName/domain/entities/my_entity.dart';
 
-///Events
+import '../../domain/entities/my_entity.dart';
+
+///States
 abstract class MyStates extends Equatable {}
 
 class InitState extends MyStates {

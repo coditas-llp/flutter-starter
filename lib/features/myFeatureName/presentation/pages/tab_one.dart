@@ -5,15 +5,14 @@ import 'package:scaffold/core/constants/dimen.dart';
 import 'package:scaffold/core/multilingual/app_locale.dart';
 import 'package:scaffold/rout_config.gr.dart';
 
-import '../../../../core/utility/common_widgets.dart';
-import 'home_page.dart';
+import '../../../../core/common_widgets/common_widgets.dart';
 
 @RoutePage()
 class TabOneScreen extends StatelessWidget {
   /// Constructs a [TabOne]
-  String title;
+  final String title;
 
-  TabOneScreen(this.title, {super.key});
+  const TabOneScreen(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:scaffold/core/errors/exceptions.dart';
-import 'package:scaffold/features/myFeatureName/data/model/my_model.dart';
 
 import '../../../../core/api_helper/base_api_helper.dart';
+import '../model/my_model.dart';
 
 abstract class MyOnlineDataSource {
   /// this will throw exception it will not handle it

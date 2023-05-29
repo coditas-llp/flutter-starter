@@ -2,14 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:scaffold/rout_config.gr.dart';
 
-import 'home_page.dart';
-
 @RoutePage()
 class TabTwoScreen extends StatelessWidget {
   /// Constructs a [TabThree]
-  String title;
+  final String title;
 
-  TabTwoScreen(this.title, {super.key});
+  const TabTwoScreen(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {

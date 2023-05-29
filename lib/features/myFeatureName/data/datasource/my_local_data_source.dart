@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:scaffold/core/db_helper/table_structures.dart';
-import 'package:scaffold/core/errors/failure.dart';
-import 'package:scaffold/features/myFeatureName/data/model/my_model.dart';
-import 'package:sqflite/sqflite.dart';
 
 import '../../../../core/db_helper/database_helper.dart';
 import '../../../../core/errors/exceptions.dart';
+import '../model/my_model.dart';
 
 abstract class MyLocalDataSource {
   /// this will throw exception it will not handle it

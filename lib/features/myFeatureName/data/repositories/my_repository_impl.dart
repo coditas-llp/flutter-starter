@@ -1,15 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'package:scaffold/core/errors/failure.dart';
 import 'package:scaffold/core/platform/network_info.dart';
-import 'package:scaffold/features/myFeatureName/data/model/my_model.dart';
 
-import 'package:scaffold/features/myFeatureName/domain/entities/my_entity.dart';
-
+import '../../domain/entities/my_entity.dart';
 import '../../domain/repositories/my_repository.dart';
 import '../datasource/my_local_data_source.dart';
 import '../datasource/my_online_data_source.dart';
+import '../model/my_model.dart';
 
 /// datasource does not handle any exception it just throws it
 /// /// repository handles all the exceptions thrown by the datasource
